@@ -1,0 +1,25 @@
+{
+    "name": "withcandour/statamic-blog-helpers",
+    "version": "0.0.1",
+    "autoload": {
+        "psr-4": {
+            "WithCandour\\StatamicBlogHelpers\\": "src"
+        }
+    },
+    "authors": [
+        {
+            "name": "Candour"
+        }
+    ],
+    "extra": {
+        "statamic": {
+            "name": "Statamic Blog Helpers",
+            "description": "Statamic Blog Helpers addon"
+        },
+        "laravel": {
+            "providers": [
+                "WithCandour\\StatamicBlogHelpers\\ServiceProvider"
+            ]
+        }
+    }
+}
