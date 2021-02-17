@@ -4,6 +4,7 @@ namespace WithCandour\StatamicBlogHelpers;
 
 use Statamic\Providers\AddonServiceProvider;
 use WithCandour\StatamicBlogHelpers\Tags\ArchiveTags;
+use WithCandour\StatamicBlogHelpers\Tags\PaginationTags;
 use WithCandour\StatamicBlogHelpers\Scopes\BlogHelpersArchiveScope;
 
 class ServiceProvider extends AddonServiceProvider
@@ -17,7 +18,8 @@ class ServiceProvider extends AddonServiceProvider
     ];
 
     protected $tags = [
-        ArchiveTags::class
+        ArchiveTags::class,
+        PaginationTags::class
     ];
 
     /**
