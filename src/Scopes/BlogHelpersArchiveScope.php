@@ -14,8 +14,11 @@ class BlogHelpersArchiveScope extends Scope
     {
         $year = $values->get('archive_year');
         $month = $values->get('archive_month');
-
-        if(!empty($month)) {
+        if (empty($month) || empty($year)) {
+            return '';
+        }
+        
+        if (!empty($month)) {
             $since = Carbon::parse("01-{$month}-{$year}");
             $until = (new Carbon($since))->endOfMonth();
         } else {
