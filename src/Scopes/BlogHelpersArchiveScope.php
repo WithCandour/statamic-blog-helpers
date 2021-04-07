@@ -15,7 +15,7 @@ class BlogHelpersArchiveScope extends Scope
         $year = $values->get('archive_year');
         $month = $values->get('archive_month');
         
-        if (empty($month) || empty($year)) {
+        if (empty($month) && empty($year)) {
             return '';
         }
         
